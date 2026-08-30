@@ -40,6 +40,10 @@
 - **`imgproc`** Hugo shortcode for image processing, plus additional **`position`** param [ left | center | right ] (optional).
   - eg: `{{< imgproc "img/hello.png" Resize "250x" center />}}`
   - More detailed info on processing commands at the [documentation](https://gohugo.io/content-management/image-processing/)
+- **caption** same as `figcaption` but without figure itself. Has the optional props: **`align`** (left | **center** is default | right), **`style`**
+  - eg: `{{< caption align="center" style="font-style: italic;" >}}`
+- **epigraph** same as `blockquote`, i.e. markdown quotation, but left-alignmented.
+  - e.g. `{{< epigraph >}}The years ago..{{< /epigraph >}}`
 - **`code`** (prop required: **`language`**; props optional: **`title`**, **`id`**, **`expand`** (default "△"), **`collapse`** (default "▽"), **`isCollapsed`**)
   - eg:
   ```go

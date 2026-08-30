@@ -129,6 +129,24 @@ figure {
   }
 }
 
+figcaption {
+  font-size: .9rem;
+  margin-top: 5px;
+  opacity: .8;
+
+  &.left {
+    text-align: left;
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  &.right {
+    text-align: right;
+  }
+}
+
 code, kbd {
   font-family: Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;
   background: var(--background-secondary);
@@ -174,7 +192,7 @@ pre {
   }
 }
 
-blockquote {
+blockquote:not([class]) {
   border-left: 2px solid;
   margin: 10px;
   padding: 10px 20px;
@@ -191,6 +209,27 @@ blockquote {
     position: absolute;
     left: -40px;
     top: -20px;
+  }
+
+  p:first-of-type {
+    margin-top: 0;
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+blockquote.epigraph {
+  border-right: 2px solid;
+  margin: 10px;
+  padding: 10px 20px;
+  text-align: right;
+  font-style: italic;
+
+  @media ($phone) {
+    margin: 10px;
+    padding: 10px;
   }
 
   p:first-of-type {

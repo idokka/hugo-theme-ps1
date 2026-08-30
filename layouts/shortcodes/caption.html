@@ -1,0 +1,1 @@
+<figcaption class="{{ with .Get "align"}}{{ . }}{{ else -}} center {{- end }}" {{ with .Get "style" }} style="{{ . | safeCSS }}" {{ end }}>{{ .Inner | markdownify }}</figcaption>
